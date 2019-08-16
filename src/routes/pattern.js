@@ -5,6 +5,6 @@ const Auth = require('../helpers/auth')
 Route
 .get('/',controller.getPattern)
 .post('/',controller.postPattern)
-.patch('/:idUser',controller.patchPattern)
+.patch('/:idPattern',controller.patchPattern)
 
 module.exports = Route

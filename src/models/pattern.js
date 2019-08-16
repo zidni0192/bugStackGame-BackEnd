@@ -11,7 +11,7 @@ module.exports = {
             })
         })
     },
-    postScore:(data)=>{
+    postPattern:(data)=>{
         return new Promise((resolve,reject)=>{
             connection.query('UPDATE pattern SET ? ',data,(error,result)=>{
                 if(!error){
@@ -22,7 +22,7 @@ module.exports = {
             })
         })
     },
-    patchScore:(data,idPattern)=>{
+    patchPattern:(data,idPattern)=>{
         return new Promise((resolve,reject)=>{
             connection.query('UPDATE pattern SET ? WHERE idPattern=?',[data,idPattern],(error,result)=>{
                 if(!error){

@@ -14,7 +14,7 @@ module.exports = {
             pattern:req.body.pattern,
             score:req.body.score
         }
-        model.patchPattern(data)
+        model.postPattern(data)
         .then((result)=>{
             res.json({idPattern:result.insertId,data})
         })
@@ -27,7 +27,9 @@ module.exports = {
             pattern:req.body.pattern,
             score:req.body.score
         }
-        const idUser = req.params.idPattern
+        const idPattern = req.params.idPattern
+        console.log(idPattern);
+        
         model.patchPattern(data,idPattern)
         .then((result)=>{
             res.json(result)
